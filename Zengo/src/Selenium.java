@@ -9,7 +9,6 @@ public class Selenium {
 		System.setProperty("webdriver.chrome.driver", "/Users/Ido Finzy/Downloads/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://zengo.com/");
-		//driver.get("https://zengo.com/free-bitcoin/");
 		driver.manage().window().maximize();
 	}
 	
@@ -20,7 +19,8 @@ public class Selenium {
 	
 	public void pressDownloadZenGo() throws InterruptedException {
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("a[data-lity]")).click();
+		driver.findElement(By.cssSelector("a[href='#popup-model']")).click();
+
 	}
 	
 	public void navigate() throws InterruptedException {
